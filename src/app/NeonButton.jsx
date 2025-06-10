@@ -1,11 +1,11 @@
+// NeonButton.tsx
 'use client';
 import React from 'react';
-import Link from 'next/link';
-import './NeonButton.css'; // Make sure this path is correct
+import './NeonButton.css';
 
 export default function NeonButton({ href, children }) {
   return (
-    <Link href={href} className="neon-button-link">
+    <a href={href} className="neon-button-link"> {/* 🔥 hard reloads page */}
       <button className="neon-btn">
         {children}
         {[...Array(6)].map((_, i) => (
@@ -21,11 +21,11 @@ export default function NeonButton({ href, children }) {
                 207.96,29.37 371.12,197.68 392.05,407.74 
                 20.93,-210.06 184.09,-378.37 392.05,-407.74 
                 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
-              ></path>
+              />
             </svg>
           </div>
         ))}
       </button>
-    </Link>
+    </a>
   );
 }

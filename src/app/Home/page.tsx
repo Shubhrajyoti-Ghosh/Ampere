@@ -1,11 +1,10 @@
 'use client';
 
 import './page.css';
-import SectionOne from "./SectionOne";
-import SectionTwo from "./SectionTwo";
-import SectionThree from "./SectionThree";
-import WelcomeMessage from "./WelcomeMessage";
-
+import SectionOne from './SectionOne';
+import SectionTwo from './SectionTwo';
+import SectionThree from './SectionThree';
+import WelcomeMessage from './WelcomeMessage';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
