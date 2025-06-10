@@ -134,9 +134,9 @@ export default function Domains() {
                 <div className="card" id="card5">
                     <h2 className="heading" id="heading5">CONTENT AND DESIGN CELL</h2>
                     <h3 className="subHeading">Significance</h3>
-                    <p className="text">Creativity meets communication in this multifaceted domain. Whether it's crafting compelling cardContainer, designing eye-catching graphics, or producing impactful videos, this team shapes how Ampere tells its story.</p>
+                    <p className="text">Creativity meets communication in this multifaceted domain. Whether it&apos;s crafting compelling cardContainer, designing eye-catching graphics, or producing impactful videos, this team shapes how Ampere tells its story.</p>
                     <h3 className="subHeading">Vision</h3>
-                    <p className="text">To communicate ideas and events with creativity and clarity, capturing the essence of the society’s mission through powerful visual and written narratives.</p>
+                    <p className="text">To communicate ideas and events with creativity and clarity, capturing the essence of the society&apos;s mission through powerful visual and written narratives.</p>
                 </div>
             </div>
 
