@@ -1,0 +1,67 @@
+.welcomeMessageWrapper {
+    position: fixed;
+    width: 100vw;
+    height: calc(100vh - 9rem);
+    top: 9rem;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.welcomeText {
+    position: fixed;
+    top: 40%;
+    left: 43.5%;
+    color: aliceblue;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-size: 7vh;
+}
+
+.wlcMsgAmpereLogo {
+    position: fixed;
+    max-height: 25vh;
+    top: 47%;
+    left: 38%;
+    filter: drop-shadow(2px 2px 4px rgb(0, 0, 0));
+}
+
+.welcomeMessageWrapper p {
+    position: fixed;
+    font-size: 4vh;
+    top: 75%;
+    left: 40.5%;
+    color: aliceblue;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+@media screen and (orientation: portrait) {
+    .welcomeText {
+        position: fixed;
+        font-size: 4vh;
+        top: 50%;
+        left: 38.5%;
+        color: aliceblue;
+        text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    }
+
+    .wlcMsgAmpereLogo {
+        position: relative;
+        max-height: 12vh;
+        top: 58%;
+        left: 30%;
+        filter: drop-shadow(2px 2px 4px rgb(0, 0, 0));
+        position: fixed;
+    }
+
+    .welcomeMessageWrapper p {
+        position: fixed;
+        font-size: 2.5vh;
+        top: 73%;
+        left: 27.5%;
+        padding-right: 1rem;
+        color: aliceblue;
+        text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    }
+}

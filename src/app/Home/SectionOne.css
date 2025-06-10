@@ -1,0 +1,8 @@
+.video-bg {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 9rem);
+    object-fit: fill;
+    background-color: black;
+    z-index: 1;
+}

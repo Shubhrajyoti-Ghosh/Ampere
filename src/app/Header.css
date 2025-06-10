@@ -1,0 +1,191 @@
+.utilityBar {
+    position: fixed;
+    height: 5rem;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    background-color: #221742;
+    overflow: hidden;
+}
+
+#societyLogo {
+    max-height: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 5px!important
+}
+
+.ampere-logo {
+    filter: none !important;
+}
+
+.utilityBar i {
+    font-size: 1.5rem;
+    color: rgb(93, 111, 135);
+    display: inline-block; 
+    padding: 0 2rem;
+}
+
+.utilityBar img {
+    max-height: 4.5rem;
+    filter: drop-shadow(0px 0px 4px rgb(207, 241, 206));
+    transition: max-height 0.4s ease, filter 0.4s ease;
+}
+
+.utilityBar i:hover, .utilityBar i:active, .utilityBar i:focus {
+    animation: fa-shake 1s 1;
+}
+
+.utilityBar img:hover {
+    max-height: 4.8rem;
+    filter: drop-shadow(0px 0px 4px white);
+}
+
+#pseudoNavBar {
+    background-color: rgb(1, 8, 64);
+    padding: 0.05vh 2rem;
+    position: fixed;
+    height: 4rem;
+    top: 5rem;
+    width: 100%;
+    z-index: 2;
+}
+
+.navbar {
+    background-color: transparent;
+    padding: 0.05rem 2rem;
+    position: fixed;
+    height: 4rem;
+    top: 5rem;
+    width: 100%;
+    z-index: 3;
+    overflow: visible;
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbarNavAltMarkup {
+    background-color: transparent;
+    max-height: 4rem;
+    overflow-y: hidden;
+}
+
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    display: flex;
+    z-index: 3;
+    padding: 0.5rem 1.2rem;
+}
+
+.neon-btn {
+    color: azure;
+    background-color: transparent;
+    border-color: transparent;
+    display: inline-block;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    font-size: 18px;
+}
+
+.star-1, .star-2, .star-3, .star-4, .star-5, .star-6 {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* When the button is hovered, show the stars */
+.neon-btn:hover .star-1,
+.neon-btn:hover .star-2,
+.neon-btn:hover .star-3,
+.neon-btn:hover .star-4,
+.neon-btn:hover .star-5,
+.neon-btn:hover .star-6 {
+    opacity: 1;
+}
+
+.navbar-toggler {
+    margin: 0 1rem 0 auto; /* no vertical margin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Make it full height of navbar */
+}
+
+.neon-btn:hover, .neon-btn:active, .neon-btn:focus {
+    background-color: #8FD9FB;
+    border-color: #000099;
+    color: black;
+    scale: 0.95;
+}
+
+
+@media (max-width: 991.98px) {
+    .nav-item {
+        display: block;
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-item::after {
+        content: "";
+        display: block;
+        margin: 0.5rem auto;
+        height: 3px;
+        width: 80%;
+        background: radial-gradient(ellipse at center, rgba(128,128,128,0.4) 0%, rgba(128,128,128,0.3) 70%, transparent 100%);
+    }
+
+    #navbarNavAltMarkup {
+        max-height: 60vh;
+        overflow-y: auto;
+        z-index: 3;
+        background-color: rgba(1, 8, 64);
+    }
+
+    /* For Designing Scrollbar */
+    #navbarNavAltMarkup::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    #navbarNavAltMarkup::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+    }
+}
+
+/* For providing voltage surge effect to the separator lines after Nav-Items */ 
+.nav-item:hover::after, .nav-item:active::after {
+    background: radial-gradient(circle, #00ffcc 0%, transparent 80%);
+    animation: ripple-surge 0.4s ease-out;
+}
+
+@keyframes ripple-surge {
+    0% {
+        transform: scaleX(0.8);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scaleX(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scaleX(1);
+        opacity: 0.4;
+    }
+}

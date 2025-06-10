@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.power-wrapper {
+  position: relative;
+}
+
+.outer-circle {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center,
+    #ff0000 60%,
+    #990000 75%,
+    #660000 90%,
+    #330000 100%
+  );
+
+  box-shadow:
+    /* INNER BEVEL */
+        /* Inner edge highlight (top) */
+    inset 0 6px 12px rgba(255, 255, 255, 0.15),
+
+    /* Inner edge shadow (bottom) */
+    inset 0 -6px 16px rgba(0, 0, 0, 0.6),
+
+    /* OUTER DROP SHADOW */
+    0 6px 16px rgba(0, 0, 0, 0.6);   /* dark lift shadow */
+
+  transition: background 0.8s ease;
+}
+
+.outer-circle.on {
+  /* Swap red gradient to green */
+  background: radial-gradient(circle at center,
+    #00ff00 60%,
+    #009900 75%,
+    #006600 90%,
+    #003300 100%
+  );
+}
+
+.middle-circle {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: #000; /* The black ring layer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.929);
+}
+
+.inner-circle {
+  width: 260px;
+  height: 260px;
+  background: linear-gradient(to bottom, #000, #5a5858);
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.inner-circle.pressed {
+  transform: scale(0.95);
+}
+
+.power-button {
+  background: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  transition: border 0.8s ease-in-out;
+}
+
+.power-button:hover {
+    border: 2px solid rgb(100, 108, 255);
+}
+
+.icon {
+  color: #ff0000;
+  transition: color 0.5s;
+}
+
+.icon.green {
+  color: #00ff00;
+}
+
+.power-screen {
+  position: fixed;
+  inset: 0;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

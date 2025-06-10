@@ -1,0 +1,94 @@
+footer {
+    position: relative;
+    background-color: #222;
+    width: 100vw;
+    padding-bottom: 0.5rem;
+    top: 0;
+}
+
+.infoWrapper {
+    display: flex;
+    padding: 1rem 1rem 0 1rem;
+    justify-content: space-around;
+}
+
+.Wrapper1, .Wrapper2 {
+    display: flex;
+} 
+
+.societyInfo {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.societyInfo img {
+    height: 15%;
+    width: 15%;
+}
+
+.follows {
+    color: aliceblue;
+    padding: 0 1rem 0 1rem;
+}
+
+.contacts {
+    color: aliceblue;
+    display: block;
+    padding: 0 1rem 0 1rem;
+}
+
+@media (max-width: 992.99px) {
+.infoWrapper {
+    display: block;
+}
+
+.Wrapper1 {
+    display: block;
+}
+}
+
+.quickLinks {
+    text-align: center;
+}
+
+.quickLinks h2 {
+    color: #003ffc;
+}
+
+.igIcon i {
+  background: radial-gradient(circle at 30% 107%, 
+              #fdf497 0%, #fdf497 5%, 
+              #fd5949 45%, #d6249f 60%, 
+              #285AEB 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* fallback */
+}
+
+.igIcon, .igIcon, .liIcon, .xIcon  {
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+.copyright {
+    color: aliceblue;
+    text-align: center;
+}
+
+.footerLink {
+    text-decoration: none;
+    color: blanchedalmond;
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.footerLink:hover, .footerLink:active, .footerLink:focus {
+    background-color: rgba(0, 0, 0, 0.977);
+    border-radius: 999px;  /* pill shape */
+    color: gold;
+    transform: scale(1.05);
+}
+
+.Links {
+    display: flex;
+}

@@ -1,0 +1,44 @@
+#TransformerWithWire {
+    position: absolute;
+    top: -0.5rem;
+    right: -5.5rem;
+    height: auto;
+    width: 80%;
+}
+
+@media screen and (orientation: portrait) {
+    #TransformerWithWire {
+        right: -4.5rem;
+        width: 120%;
+    }
+}
+
+#Transformer-in-Light {
+    filter: drop-shadow(-18px 15px 10px rgba(0, 0, 0));
+    transition: filter 1s ease-in;
+}
+
+#Transformer-in-Light:hover {
+    filter:
+        drop-shadow(0 0 8px #b10ff0);
+}
+
+#Front-blue-wire,
+#Middle-blue-wire,
+#Back-blue-wire {
+    stroke: #00bfff;
+    stroke-width: 2;
+    filter:drop-shadow(0 0 4px white);
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+#Front-yellow-wire,
+#Middle-yellow-wire,
+#Back-yellow-wire {
+    stroke: #FFEF00;
+    stroke-width: 2;
+    filter:drop-shadow(0 0 4px white);
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}

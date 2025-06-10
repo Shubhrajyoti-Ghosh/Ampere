@@ -1,0 +1,13 @@
+.mainWrapper {
+  position: relative;
+  height: 100vh;
+  padding-top: 9rem;
+  box-sizing: border-box;
+}
+
+.section {
+  position: absolute;
+  height: calc(100vh - 9rem);
+  width: 100vw;
+  left: 0;
+}

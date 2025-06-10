@@ -1,0 +1,98 @@
+#introductionSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 80%, rgba(143, 141, 157, 0.8)),
+        linear-gradient(to right, #00bfff 80%, #8f8d9d);
+}
+
+.landingText1 {
+    position: absolute;
+    top: 20vh;
+    left: 5vw;
+    font-size: 5vw;
+    font-weight: 900;
+    margin: auto;
+    color: #ffd700;
+    filter: drop-shadow(-4px 3px 1px rgba(0, 0, 0));
+    transform: translateY(-40px);
+}
+
+.title {
+    font-weight: bold;
+    background: linear-gradient(to right, #00F0FF, #3B82F6, #D946EF, #221742);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.landingText1 p {
+    display: block;
+    font-size: 3vw;
+    font-weight: 800;
+    color: #98FF98;
+}
+
+.landingSeparator {
+    margin: 0 0.5rem;
+    font-size: 3.5vw;
+    font-weight: 700;
+    color: #CCFF00;
+}
+
+.landingText2 {
+    position: absolute;
+    top: 43vh;
+    left: 0;
+    max-width: 50vw;
+    margin: 2.8rem;
+    font-size: 1.5vw;
+    z-index: 8;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(-4px 3px 1px rgba(0, 0, 0));
+    transform: translateY(20px);
+}
+
+@media screen and (min-aspect-ratio: 3/4) and (max-aspect-ratio: 4/3) {
+    .landingText1 {
+        top: 17vh;
+        left: 5vw;
+        font-size: 5.5vw;
+    }
+    .landingText1 p {
+        font-size:3.3vw;
+    }
+    .landingSeparator {
+        font-size: 4.3vw;
+    }
+    .landingText2 {
+        top: 40vh;
+        left: auto;
+        max-width: 90vw;
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .landingText1 {
+        top: 43vh;
+        left: auto;
+        font-size: 8vw;
+    }
+    .landingText1 p {
+        font-size: 5vw;
+    }
+    .landingSeparator {
+        font-size: 6vw;
+    }
+    .landingText2 {
+        top: 55vh;
+        left: auto;
+        max-width: 90vw;
+        font-size: 2.5vw;
+    }
+}
