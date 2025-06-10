@@ -49,7 +49,7 @@ export default function Domains() {
 
     useEffect(() => {
         const cards = document.querySelectorAll('.card');
-        cards.forEach((card, index) => {
+        cards.forEach((card) => {
             const cardInner = card.querySelector('.card');
             const rotation = gsap.utils.random(-7, 7, true);
 
