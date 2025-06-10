@@ -39,12 +39,10 @@ export default function MsgBox() {
         setFocusedField(field);
     };
 
-
     const handleBlur = (field: string) => {
-        setFocusedField("");
-        setTypingField("");
+        if (focusedField === field) setFocusedField("");
+        if (typingField === field) setTypingField("");
     };
-
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
