@@ -6,7 +6,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import NeonButton from './NeonButton.jsx';
 import { usePathname } from 'next/navigation';
-import Link from 'next/link';
 
 export default function Header() {
     const pathname = usePathname();
