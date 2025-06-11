@@ -6,7 +6,7 @@ export default function SectionOne() {
     return (
         <section className="section" id="welcomeSection">
             <video autoPlay muted loop playsInline className="video-bg">
-                <source src="TestBackground.mp4" type="video/mp4" />
+                <source src="SectionOneBackgroundImg.mp4" type="video/mp4" />
             </video>
         </section>
     )
