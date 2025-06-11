@@ -6,15 +6,19 @@ footer {
     top: 0;
 }
 
-.infoWrapper {
+.mainFooterWrapper {
     display: flex;
-    padding: 1rem 1rem 0 1rem;
+    padding: 2rem 2rem 0 2rem;
     justify-content: space-around;
 }
 
-.Wrapper1, .Wrapper2 {
+.infoWrapper {
+    max-width: 30%;
+    text-align: center;
     display: flex;
-} 
+    flex-direction: column;
+    justify-content: space-around;
+}
 
 .societyInfo {
     text-align: center;
@@ -22,29 +26,27 @@ footer {
 }
 
 .societyInfo img {
-    height: 15%;
-    width: 15%;
+    height: auto;
+    width: 40%;
 }
 
-.follows {
+.societyInfo p {
+    font-size: 20px;
+}
+
+.socialMediaHandles {
     color: aliceblue;
     padding: 0 1rem 0 1rem;
+}
+
+.socialMediaHandles h4 {
+    color: rgb(115, 154, 239)
 }
 
 .contacts {
+    font-size: 20px;
     color: aliceblue;
-    display: block;
     padding: 0 1rem 0 1rem;
-}
-
-@media (max-width: 992.99px) {
-.infoWrapper {
-    display: block;
-}
-
-.Wrapper1 {
-    display: block;
-}
 }
 
 .quickLinks {
@@ -55,23 +57,22 @@ footer {
     color: #003ffc;
 }
 
+.contactTitle {
+    color: #b1f143;
+}
+
 .igIcon i {
-  background: radial-gradient(circle at 30% 107%, 
-              #fdf497 0%, #fdf497 5%, 
-              #fd5949 45%, #d6249f 60%, 
-              #285AEB 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent; /* fallback */
+    background: radial-gradient(circle at 30% 107%, 
+                #fdf497 0%, #fdf497 5%, 
+                #fd5949 45%, #d6249f 60%, 
+                #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
-.igIcon, .igIcon, .liIcon, .xIcon  {
-    margin: 0 0.5rem 0 0.5rem;
-}
-
-.copyright {
-    color: aliceblue;
-    text-align: center;
+.fbIcon, .igIcon, .liIcon, .xIcon  {
+    margin: 0 1rem 0 1rem;
 }
 
 .footerLink {
@@ -80,6 +81,7 @@ footer {
     display: block;
     padding: 0.5rem;
     text-align: center;
+    font-size: 18px;
 }
 
 .footerLink:hover, .footerLink:active, .footerLink:focus {
@@ -91,4 +93,24 @@ footer {
 
 .Links {
     display: flex;
+}
+
+@media (max-width: 992.99px) {
+    .mainFooterWrapper {
+        display: block;
+    }
+    .infoWrapper {
+        max-width: 100%;
+        padding-bottom: 1rem;
+    }
+    .links {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+.copyright {
+    color: aliceblue;
+    text-align: center;
 }
