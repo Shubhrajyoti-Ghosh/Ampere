@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import Preloader from './Preloader';
 import Header from './Header';
 import Footer from './Footer';
@@ -11,15 +11,29 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
     const [showPreloader, setShowPreloader] = useState(true);
+    const [isReady, setIsReady] = useState(false); // trigger after DOM & scroll reset
 
     const handlePreloaderFinish = () => {
+        // Hide preloader
         setShowPreloader(false);
 
-        // Wait for layout to render, then refresh GSAP ScrollTrigger
-        setTimeout(() => {
-            ScrollTrigger.refresh();
-        }, 50); // slight delay to ensure layout is painted
+        // Reset scroll to top immediately after hiding
+        window.scrollTo(0, 0);
+
+        // Then defer DOM-related animation trigger
+        requestAnimationFrame(() => {
+            setIsReady(true);
+        });
     };
+
+    // This ensures ScrollTrigger is refreshed after layout + scroll reset
+    useLayoutEffect(() => {
+        if (isReady) {
+            setTimeout(() => {
+                ScrollTrigger.refresh(true); // ensure full re-evaluation
+            }, 50); // Give layout time to repaint
+        }
+    }, [isReady]);
 
     return (
         <>
