@@ -3,7 +3,6 @@
 import './page.css';
 
 import { useGSAP } from '@gsap/react';
-import { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { Roboto } from 'next/font/google';
