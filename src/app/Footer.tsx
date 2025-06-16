@@ -11,7 +11,7 @@ export default function Footer() {
                     </div>
                     
                     <div className="socialMediaHandles">
-                        <h4>For Updates Follow us on:</h4>
+                        <h4 className="subHeading">For Updates Follow us on:</h4>
                         <div>
                             <a href="#" className="fbIcon"><i className="fa-brands fa-facebook fa-beat" style={{color: "#4267b2"}}/></a>
                             <a href="#" className="igIcon"><i className="fa-brands fa-instagram fa-beat" style={{ color: "#E4405F" }}/></a>
@@ -22,14 +22,14 @@ export default function Footer() {
                 </div>
 
                 <div className="contacts">
-                    <h2 className="contactTitle">Reach Out to us</h2>
+                    <h2 className="subHeading">Reach Out to us</h2>
                     <p><b>Email:</b> amperenitd@gmail.com</p>
                     <p><b>Phone:</b> +91 7439133972</p>
                     <p><b>Location:</b> EE Dept, NIT Durgapur</p>
                 </div>
             
                 <div className="quickLinks">
-                    <h2>Quick Links</h2>
+                    <h2 className="subHeading">Quick Links</h2>
                     <div className="links">
                         <div>
                             <a href="/Home" className="footerLink">Home</a>
@@ -54,4 +54,3 @@ export default function Footer() {
         </footer>
     );
 }
-

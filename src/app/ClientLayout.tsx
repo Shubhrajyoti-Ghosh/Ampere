@@ -1,51 +1,43 @@
 'use client';
 
-import { useLayoutEffect, useState } from 'react';
-import Preloader from './Preloader';
+import { useEffect, useState } from 'react';
+
+import './Preloader.css';
 import Header from './Header';
 import Footer from './Footer';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import gsap from 'gsap';
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
-    const [showPreloader, setShowPreloader] = useState(true);
-    const [isReady, setIsReady] = useState(false); // trigger after DOM & scroll reset
+  const [loading, setLoading] = useState(true);
 
-    const handlePreloaderFinish = () => {
-        // Hide preloader
-        setShowPreloader(false);
+  useEffect(() => {
+    // Load Bootstrap JS
+    import('bootstrap/dist/js/bootstrap.bundle.min.js');
 
-        // Reset scroll to top immediately after hiding
-        window.scrollTo(0, 0);
+    // Preloader timer (fallback if video doesn't fire `onEnded`)
+    const timer = setTimeout(() => setLoading(false), 3500);
+    return () => clearTimeout(timer);
+  }, []);
 
-        // Then defer DOM-related animation trigger
-        requestAnimationFrame(() => {
-            setIsReady(true);
-        });
-    };
-
-    // This ensures ScrollTrigger is refreshed after layout + scroll reset
-    useLayoutEffect(() => {
-        if (isReady) {
-            setTimeout(() => {
-                ScrollTrigger.refresh(true); // ensure full re-evaluation
-            }, 50); // Give layout time to repaint
-        }
-    }, [isReady]);
-
-    return (
+  return (
+    <>
+      {loading ? (
+        <div className="preloader">
+          <video
+            src="/BulbPreloader.mp4"
+            autoPlay
+            muted
+            playsInline
+            onEnded={() => setLoading(false)}
+            className="preloaderVideo"
+          />
+        </div>
+      ) : (
         <>
-            {showPreloader ? (
-                <Preloader onFinish={handlePreloaderFinish} />
-            ) : (
-                <>
-                    <Header />
-                    {children}
-                    <Footer />
-                </>
-            )}
+          <Header />
+          {children}
+          <Footer />
         </>
-    );
+      )}
+    </>
+  );
 }

@@ -6,8 +6,13 @@ export default function SectionOne() {
     return (
         <section className="section" id="welcomeSection">
             <video autoPlay muted loop playsInline className="video-bg">
-                <source src="SectionOneBackgroundImg.mp4" type="video/mp4" />
+                <source src="HomePageBackgroundVideo.mp4" type="video/mp4" />
             </video>
+            <div className="welcomeMessageWrapper">
+                <h1 className="welcomeText">Welcome to</h1>
+                <img src="AmpereLogo.webp" alt="Ampere"/>
+                <p>Powering Ideas with Innovation</p>
+            </div>
         </section>
     )
 }

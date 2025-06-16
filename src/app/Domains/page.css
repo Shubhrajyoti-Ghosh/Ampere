@@ -138,8 +138,8 @@
         left: 0;
     }
     .card {
+        height: 65vh;
         width: 300px;
-
         padding: 0;
     }
     .heading {

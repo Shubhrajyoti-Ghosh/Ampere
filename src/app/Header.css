@@ -2,7 +2,7 @@
     position: fixed;
     height: 5rem;
     width: 100%;
-    z-index: 2;
+    z-index: 10;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -46,16 +46,6 @@
     filter: drop-shadow(0px 0px 4px white);
 }
 
-#pseudoNavBar {
-    background-color: rgb(1, 8, 64);
-    padding: 0.05vh 2rem;
-    position: fixed;
-    height: 4rem;
-    top: 5rem;
-    width: 100%;
-    z-index: 2;
-}
-
 .navbar {
     background-color: transparent;
     padding: 0.05rem 2rem;
@@ -63,7 +53,8 @@
     height: 4rem;
     top: 5rem;
     width: 100%;
-    z-index: 3;
+    z-index: 2;
+    background-color: rgba(4, 1, 43);
     overflow: visible;
     display: block;
     flex-direction: column;
@@ -88,50 +79,31 @@
     padding: 0.5rem 1.2rem;
 }
 
-.neon-btn {
-    color: azure;
-    background-color: transparent;
-    border-color: transparent;
+.nav-link {
     display: inline-block;
     text-align: center;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1.5rem;
+    color: azure;
     position: relative;
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
-    font-size: 18px;
-}
-
-.star-1, .star-2, .star-3, .star-4, .star-5, .star-6 {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-/* When the button is hovered, show the stars */
-.neon-btn:hover .star-1,
-.neon-btn:hover .star-2,
-.neon-btn:hover .star-3,
-.neon-btn:hover .star-4,
-.neon-btn:hover .star-5,
-.neon-btn:hover .star-6 {
-    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    font-size: 17px;
 }
 
 .navbar-toggler {
-    margin: 0 1rem 0 auto; /* no vertical margin */
+    margin: 0 1rem 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Make it full height of navbar */
+    height: 100%;
 }
 
-.neon-btn:hover, .neon-btn:active, .neon-btn:focus {
-    background-color: #8FD9FB;
-    border-color: #000099;
-    color: black;
-    scale: 0.95;
+.nav-link:hover, .nav-link:active, .nav-link:focus {
+    color: gold;
+    background-color: rgba(0, 0, 0, 0.977);
+    border-radius: 999px;  /* pill shape */
+    transform: scale(1.05);
 }
-
 
 @media (max-width: 991.98px) {
     .nav-item {

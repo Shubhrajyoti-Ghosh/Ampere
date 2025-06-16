@@ -51,7 +51,6 @@ export default function Home() {
 
     return(
         <>
-            <WelcomeMessage/>
             <div className="mainWrapper">
                 <SectionOne/>
                 <SectionTwo/>

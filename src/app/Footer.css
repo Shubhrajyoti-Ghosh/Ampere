@@ -39,10 +39,6 @@ footer {
     padding: 0 1rem 0 1rem;
 }
 
-.socialMediaHandles h4 {
-    color: #3B82F6;
-}
-
 .contacts {
     font-size: 20px;
     color: aliceblue;
@@ -54,12 +50,9 @@ footer {
     text-align: center;
 }
 
-.quickLinks h2 {
+.subHeading {
     color: #3B82F6;
-}
-
-.contactTitle {
-    color: #3B82F6;
+    text-align: center;
 }
 
 .igIcon i {
@@ -86,10 +79,29 @@ footer {
 }
 
 .footerLink:hover, .footerLink:active, .footerLink:focus {
-    background-color: rgba(0, 0, 0, 0.977);
-    border-radius: 999px;  /* pill shape */
-    color: rgb(255, 255, 255);
+    color: aliceblue;
     transform: scale(1.05);
+}
+
+/* For providing underline effect to the quick links when hovered */
+.footerLink:hover::after, .footerLink:active::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: #3B82F6;
+    animation: ripple-surge 0.4s ease-out;
+    transform-origin: left;
+}
+
+@keyframes ripple-surge {
+    0% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scaleX(1);
+        opacity: 1;
+    }
 }
 
 .links {
@@ -105,9 +117,26 @@ footer {
         max-width: 100%;
         padding-bottom: 1rem;
     }
+    .subHeading {
+        color: #3B82F6;
+        text-align: center;
+        font-size: 22px;
+    }
     .links {
         display: flex;
         justify-content: center;
+    }
+    .societyInfo p {
+        font-size: 15px;
+    }
+    .contacts {
+        font-size: 15px;
+    }
+    .footerLink {
+        font-size: 15px;
+    }
+    .copyright {
+        font-size: 12px;
     }
 }
 
