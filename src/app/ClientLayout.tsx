@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import Preloader from './Preloader';
 import Header from './Header';
 import Footer from './Footer';
