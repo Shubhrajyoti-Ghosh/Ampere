@@ -1,19 +1,37 @@
 'use client';
 
-import { useEffect } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+import { useState } from 'react';
+import Preloader from './Preloader';
+import Header from './Header';
+import Footer from './Footer';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from 'gsap';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
-  useEffect(() => {
-    import('bootstrap/dist/js/bootstrap.bundle.min.js'); // ✅ use relative module path
-  }, []);
+    const [showPreloader, setShowPreloader] = useState(true);
 
-  return (
-    <>
-    <Header />
-      {children}
-    <Footer/>
-    </>
-  );
+    const handlePreloaderFinish = () => {
+        setShowPreloader(false);
+
+        // Wait for layout to render, then refresh GSAP ScrollTrigger
+        setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 50); // slight delay to ensure layout is painted
+    };
+
+    return (
+        <>
+            {showPreloader ? (
+                <Preloader onFinish={handlePreloaderFinish} />
+            ) : (
+                <>
+                    <Header />
+                    {children}
+                    <Footer />
+                </>
+            )}
+        </>
+    );
 }

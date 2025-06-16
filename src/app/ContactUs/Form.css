@@ -1,10 +1,9 @@
 .contactForm {
-    display: block;
     position: relative;
     align-items: left;
     width: 40%;
     padding: 1rem;
-    background-color: rgba(255, 228, 196, 0.625);
+    background-color: #ffe4c49f;
 }
 
 .contactForm h3 {

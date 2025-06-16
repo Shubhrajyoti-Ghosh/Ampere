@@ -16,7 +16,7 @@
     font-size: 5vw;
     font-weight: 900;
     margin: auto;
-    color: #ffd700;
+    color: seashell;
     filter: drop-shadow(-4px 3px 1px rgba(0, 0, 0));
     transform: translateY(-40px);
 }
@@ -33,14 +33,14 @@
     display: block;
     font-size: 3vw;
     font-weight: 800;
-    color: #98FF98;
+    color: seashell;
 }
 
 .landingSeparator {
     margin: 0 0.5rem;
     font-size: 3.5vw;
     font-weight: 700;
-    color: #CCFF00;
+    color: #3B82F6;
 }
 
 .landingText2 {

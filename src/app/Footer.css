@@ -40,12 +40,13 @@ footer {
 }
 
 .socialMediaHandles h4 {
-    color: rgb(115, 154, 239)
+    color: #3B82F6;
 }
 
 .contacts {
     font-size: 20px;
     color: aliceblue;
+    text-align: center;
     padding: 0 1rem 0 1rem;
 }
 
@@ -54,11 +55,11 @@ footer {
 }
 
 .quickLinks h2 {
-    color: #003ffc;
+    color: #3B82F6;
 }
 
 .contactTitle {
-    color: #b1f143;
+    color: #3B82F6;
 }
 
 .igIcon i {
@@ -77,7 +78,7 @@ footer {
 
 .footerLink {
     text-decoration: none;
-    color: blanchedalmond;
+    color: rgb(246, 237, 225);
     display: block;
     padding: 0.5rem;
     text-align: center;
@@ -87,7 +88,7 @@ footer {
 .footerLink:hover, .footerLink:active, .footerLink:focus {
     background-color: rgba(0, 0, 0, 0.977);
     border-radius: 999px;  /* pill shape */
-    color: gold;
+    color: rgb(255, 255, 255);
     transform: scale(1.05);
 }
 

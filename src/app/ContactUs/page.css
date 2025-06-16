@@ -7,15 +7,8 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 200px;
-}
-
-.BgImg {
-    position: fixed;
-    top: 9rem;
-    height: calc(100vh - 9rem);
-    width: 100vw;
-    background-size: cover;
-    background-position: center;
+    background: radial-gradient(at 40% 45%, #e2e9f7 0, transparent 50%),
+                radial-gradient(at 50% 50%, #c6bdcb 0, transparent 50%) #fff;
 }
 
 .heading {
@@ -23,7 +16,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 8vh;
     font-weight: 900;
-    color: rgb(240, 95, 38);
+    color: #f05f26;
     filter: drop-shadow(-4px 3px 4px rgb(0, 0, 0));
 }
 
@@ -34,7 +27,7 @@
     bottom: -6px;
     height: 8px;
     width: 0;
-    background-color: green;
+    background-color: #C1440E;
     animation: underlineGrow 1s ease forwards;
     animation-delay: 0.5s;
 }
@@ -48,24 +41,18 @@
 .information {
     width: 100%;
     display: flex;
-    padding: 5vw 2rem;
+    padding: 1rem 2rem;
 }
 
 .details {
-    margin: 50px 5vw 10px 10px;
-}
-
-#location {
-    margin: 1.5rem 0.5rem;
-}
-
-#mobNo {
-    margin: 1.5rem 0.5rem;
+    width: 55%;
+    margin: 0px 2vw 10px 10px;
 }
 
 .subHeading h3 i {
     position: relative;
     z-index: 1;
+    margin: 0rem 0.5rem;
 }
 
 .subHeading h3 span {
@@ -79,7 +66,7 @@
 .subHeading p {
     font-size: 16.5px;
     font-weight: 500;
-    padding-left: 1.8rem;
+    padding-left: 2.8rem;
     filter: drop-shadow(-1px 2px 1px rgba(51, 51, 51, 0.577));
 }
 
@@ -87,12 +74,15 @@
     display: flex;
     align-items: center;
     margin-left: 2vw;
+    width: 100%;
+    height: 320px;
+    padding-right: 2rem;
 }
 
 iframe {
     margin: 15px 0px 15px 0px ;
-    height: 60vh;
-    width: 50vw;
+    width: 100%;
+    height: 100%;
     filter: drop-shadow(-7px 8px 8px black);
     transition: transform 0.3s ease, filter 0.3s ease;
 
@@ -105,7 +95,8 @@ iframe:hover {
 
 @media (max-width: 991.99px) {
     .heading {
-        font-size: 12vw;
+        font-size: 60px;
+        display: flex;
     }
     .heading::after {
         height: 6.5px;
@@ -116,6 +107,7 @@ iframe:hover {
     }
     .details {
         margin: 0;
+        width: 100%;
     }
     #location {
         margin: 0;
@@ -125,5 +117,26 @@ iframe:hover {
     }
     iframe {
         width: 85vw;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .heading {
+        font-size: 45px;
+        display: flex;
+    }
+    .heading::after {
+        height: 4.5px;
+    }
+    .information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .subHeading p {
+        font-size: 15px;
+    }
+    .map {
+        padding: 0 0 2rem 0;
     }
 }

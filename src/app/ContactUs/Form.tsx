@@ -151,7 +151,7 @@ export default function MsgBox() {
                     }}>
                     {formData.remarks.length}/500 characters
                 </p>
-                <button type="submit"><i className="fa-solid fa-paper-plane" style={{color: "#6f42c1", fontSize: "2rem"}}/></button>
+                <button type="submit"><i className="fa-solid fa-paper-plane" style={{color: "#3B82F6", fontSize: "2rem"}}/></button>
             </form>
         </div>
     );

@@ -1,0 +1,14 @@
+.preloader {
+    position: fixed;
+    inset: 0;
+    background: #f3f7f8;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader-video {
+    width: 20vw;
+    object-fit: cover;
+}

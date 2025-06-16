@@ -33,6 +33,7 @@
 /* Card base style */
 .card {
     width: 800px;
+    height: 60vh;
     padding: 20px;
     border-radius: 20px;
     display: flex;

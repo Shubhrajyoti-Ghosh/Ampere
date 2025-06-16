@@ -27,7 +27,7 @@
 #Front-blue-wire,
 #Middle-blue-wire,
 #Back-blue-wire {
-    stroke: #00bfff;
+    stroke: #3B82F6;
     stroke-width: 2;
     filter:drop-shadow(0 0 4px white);
     stroke-dasharray: 1000;

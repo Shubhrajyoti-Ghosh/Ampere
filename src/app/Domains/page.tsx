@@ -17,8 +17,7 @@ const roboto = Roboto ({
 });
 
 export default function Domains() {
-    useGSAP(() => {
-        const cardsContainer = gsap.utils.toArray<HTMLElement>('.cardContainer');
+        useGSAP(() => {
         const cards = gsap.utils.toArray<HTMLElement>('.card');
 
         const tl = gsap.timeline({
@@ -27,62 +26,22 @@ export default function Domains() {
                 trigger: '.allCardsContainer',
                 pin: true,
                 start: 'top 81vh',
-                end: `+=${cardsContainer.length * 50}%`,
+                end: `+=${cards.length * 50}%`,
                 scrub: 1,
             },
         });
 
-        tl.to(cards[0], { opacity: 1, scale: 1, rotate: -3 });
+        // Make first card visible
+        tl.to(cards[0], { opacity: 1, scale: 1 });
 
-        cardsContainer.forEach((_, i) => {
+        // Stack subsequent cards with parallax entrance and fading effect
+        cards.forEach((card, i) => {
             if (i === 0) return;
-            tl.to(cards[i], {
-                duration: 1.5,
+            tl.to(card, {
                 y: '0%',
                 opacity: 1,
                 scale: 1,
-                rotate: i * 3 * (i % 2 === 0 ? 1 : -1),
                 ease: 'power2.out',
-            });
-        });
-    }, []);
-
-    useEffect(() => {
-        const cards = document.querySelectorAll('.card');
-        cards.forEach((card) => {
-            const cardInner = card.querySelector('.card');
-            const rotation = gsap.utils.random(-7, 7, true);
-
-            if (!cardInner) return;
-
-            gsap.set(cardInner, {
-                scale: 1,
-                rotation: rotation,
-            });
-
-            ScrollTrigger.create({
-                trigger: card,
-                start: 'top 100%',
-                end: 'top 25%',
-                scrub: 1,
-                onUpdate: (self) => {
-                    const progress = self.progress;
-
-                    gsap.to(cardInner, {
-                        scale: gsap.utils.interpolate(1.1, 0.9, progress),
-                        rotation: rotation,
-                        overwrite: false,
-                    });
-                },
-            });
-
-            gsap.to(cardInner, {
-                y: '+=5',
-                repeat: -1,
-                yoyo: true,
-                ease: 'power1.inOut',
-                duration: gsap.utils.random(1, 2),
-                overwrite: false,
             });
         });
     }, []);
