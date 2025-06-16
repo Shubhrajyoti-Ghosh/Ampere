@@ -9,17 +9,17 @@ export default function ContactUs() {
 
             <h1 className="heading">Get in Touch</h1>
 
-            <div className="information">
-                <div className="details">
-                    <div className="subHeading">
+            <div className="CU-information">
+                <div className="CU-details">
+                    <div className="CU-subHeading">
                         <h3><i className="fa-duotone fa-solid fa-envelope" style={{color: "#d44638", fontSize: "x-large"}}/><span>Email Id:</span></h3>
                         <p>amperenitd@gmail.com</p>
                     </div>
-                    <div className="subHeading">
+                    <div className="CU-subHeading">
                         <h3><i className="fa-solid fa-phone" style={{color: "#156533", fontSize: "large"}}/><span>Contact Details:</span></h3>
                         <p>Sohom Mondal {"("}<i>President</i>{")"}: +91 7439133972</p>
                     </div>
-                    <div className="subHeading">
+                    <div className="CU-subHeading">
                         <h3><i className="fa-solid fa-location-dot" style={{color: "#ffc800", fontSize: "x-large"}}/><span>Location:</span></h3>
                         <p>National Institute of Technology Durgapur, Mahatma Gandhi Avenue, A-Zone, Durgapur, West Bengal Durgapur: 713209</p>
                     </div>
