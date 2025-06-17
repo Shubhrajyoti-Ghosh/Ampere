@@ -51,9 +51,9 @@ export default function Domains() {
             <div className="cardContainer">
                 <div className="card" id="card1">
                     <h2 className="heading" id="heading1">WEB DEVELOPMENT CELL</h2>
-                    <h3 className="subHeading">Significance</h3>
+                    <h3 className="D-subHeading">Significance</h3>
                     <p className="text">The web development team forms the digital backbone of Ampere. From building intuitive websites to creating dynamic platforms, this domain ensures that our online presence reflects our vision and values.</p>
-                    <h3 className="subHeading">Vision</h3>
+                    <h3 className="D-subHeading">Vision</h3>
                     <p className="text"> To create seamless, accessible, and user-friendly digital interfaces that showcase the innovations, events, and community spirit of Ampere.</p>
                 </div>
             </div>
@@ -61,9 +61,9 @@ export default function Domains() {
             <div className="cardContainer">
                 <div className="card" id="card2">
                     <h2 className="heading" id="heading2">DIGITAL OUTREACH CELL</h2>
-                    <h3 className="subHeading">Significance</h3>
+                    <h3 className="D-subHeading">Significance</h3>
                     <p className="text">This team is the voice of Ampere in the digital world. Through engaging posts, updates, and campaigns, they keep the NIT Durgapur community informed and inspired.</p>
-                    <h3 className="subHeading">Vision</h3>
+                    <h3 className="D-subHeading">Vision</h3>
                     <p className="text"> To cultivate a vibrant online presence that connects students, professionals, and enthusiasts while celebrating the achievements and activities of the society.</p>
                 </div>
             </div>
@@ -71,9 +71,9 @@ export default function Domains() {
             <div className="cardContainer">
                 <div className="card" id="card3">
                     <h2 className="heading" id="heading3">WORKSHOPS AND TECHNICAL TALKS CELL</h2>
-                    <h3 className="subHeading">Significance</h3>
+                    <h3 className="D-subHeading">Significance</h3>
                     <p className="text"> This domain bridges the gap between classroom learning and real-world application. By organizing workshops and talks by experts, it helps members stay updated with the latest technologies and industry trends.</p>
-                    <h3 className="subHeading">Vision</h3>
+                    <h3 className="D-subHeading">Vision</h3>
                     <p className="text">To empower students with practical skills and knowledge that foster innovation, curiosity, and continuous learning.</p>
                 </div>
             </div>
@@ -81,9 +81,9 @@ export default function Domains() {
             <div className="cardContainer">
                 <div className="card" id="card4">
                     <h2 className="heading" id="heading4">CODE AND QUIZ CELL</h2>
-                    <h3 className="subHeading">Significance</h3>
+                    <h3 className="D-subHeading">Significance</h3>
                     <p className="text">This domain fuels the competitive spirit and sharpens problem-solving abilities. With events focused on AI/ML, Embedded Systems, VLSI, and more, it challenges students to think critically and creatively.</p>
-                    <h3 className="subHeading">Vision</h3>
+                    <h3 className="D-subHeading">Vision</h3>
                     <p className="text">To cultivate a culture of excellence and innovation through intellectually stimulating competitions that drive technical mastery.</p>
                 </div>
             </div>
@@ -91,9 +91,9 @@ export default function Domains() {
             <div className="cardContainer">
                 <div className="card" id="card5">
                     <h2 className="heading" id="heading5">CONTENT AND DESIGN CELL</h2>
-                    <h3 className="subHeading">Significance</h3>
+                    <h3 className="D-subHeading">Significance</h3>
                     <p className="text">Creativity meets communication in this multifaceted domain. Whether it&apos;s crafting compelling cardContainer, designing eye-catching graphics, or producing impactful videos, this team shapes how Ampere tells its story.</p>
-                    <h3 className="subHeading">Vision</h3>
+                    <h3 className="D-subHeading">Vision</h3>
                     <p className="text">To communicate ideas and events with creativity and clarity, capturing the essence of the society&apos;s mission through powerful visual and written narratives.</p>
                 </div>
             </div>
@@ -101,9 +101,9 @@ export default function Domains() {
             <div className="cardContainer">
                 <div className="card" id="card6">
                     <h2 className="heading" id="heading6">ALUMNI INTERACTION CELL</h2>
-                    <h3 className="subHeading">Significance</h3>
+                    <h3 className="D-subHeading">Significance</h3>
                     <p className="text">The alumni domain strengthens the bridge between the past and present. By connecting with graduates, it creates opportunities for mentorship, guidance, and inspiration.</p>
-                    <h3 className="subHeading">Vision</h3>
+                    <h3 className="D-subHeading">Vision</h3>
                     <p className="text">To build a thriving network of support and knowledge-sharing that connects current students with accomplished alumni, fostering a legacy of growth and collaboration.</p>
                 </div>
             </div>

@@ -2,6 +2,8 @@ footer {
     position: relative;
     background-color: #222;
     width: 100vw;
+    font-family: 'Chopin';
+    src: url('/fonts/chopin/Chopin-Regular.otf') format('opentype');
     padding-bottom: 0.5rem;
     top: 0;
 }
@@ -9,7 +11,7 @@ footer {
 .mainFooterWrapper {
     display: flex;
     padding: 2rem 2rem 0 2rem;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .infoWrapper {
@@ -40,19 +42,26 @@ footer {
 }
 
 .contacts {
-    font-size: 20px;
+    font-size: 18px;
     color: aliceblue;
-    text-align: center;
+    line-height: 1.1;
+    text-align: left;
     padding: 0 1rem 0 1rem;
 }
 
 .quickLinks {
     text-align: center;
+    padding: 0 1rem 0 1rem;
 }
 
 .subHeading {
+    font-size: 25px;
     color: #3B82F6;
     text-align: center;
+}
+
+.contacts .subHeading {
+    text-align: left;
 }
 
 .igIcon i {
@@ -71,7 +80,7 @@ footer {
 
 .footerLink {
     text-decoration: none;
-    color: rgb(246, 237, 225);
+    color: aliceblue;
     display: block;
     padding: 0.5rem;
     text-align: center;
@@ -79,7 +88,7 @@ footer {
 }
 
 .footerLink:hover, .footerLink:active, .footerLink:focus {
-    color: aliceblue;
+    color: rgb(246, 237, 225);
     transform: scale(1.05);
 }
 
@@ -131,6 +140,10 @@ footer {
     }
     .contacts {
         font-size: 15px;
+        text-align: center;
+    }
+    .contacts .subHeading {
+        text-align: center;
     }
     .footerLink {
         font-size: 15px;

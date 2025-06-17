@@ -1,40 +1,59 @@
 .contactUsWrapper {
     position: relative;
-    top: 9rem;
+    top: 5rem;
     width: 100%;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Chopin';
+    src: url('/fonts/chopin/Chopin-SemiBold.otf') format('opentype');
     padding-bottom: 200px;
     background: radial-gradient(at 40% 45%, #e2e9f7 0, transparent 50%),
                 radial-gradient(at 50% 50%, #c6bdcb 0, transparent 50%) #fff;
 }
 
+#CU-heading {
+    display: flex;
+    justify-content: center;
+}
+
 .heading {
     position: relative;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 8vh;
     font-weight: 900;
     color: #f05f26;
-    filter: drop-shadow(-4px 3px 4px rgb(0, 0, 0));
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid black;
+    animation: typing 3s steps(13) forwards, blink 0.5s step-end 9, removeCursor 0s forwards;
+    animation-delay: 
+        0s,                /* typing starts immediately */
+        0s,                /* blink also starts immediately */
+        4.5s;              /* run removeCursor after blink ends */
 }
 
-.heading::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    height: 8px;
-    width: 0;
-    background-color: #C1440E;
-    animation: underlineGrow 1s ease forwards;
-    animation-delay: 0.5s;
-}
-
-@keyframes underlineGrow {
+/* Typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
     to {
         width: 100%;
+    }
+    }
+
+/* Cursor blink effect */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* This removes the cursor completely */
+@keyframes removeCursor {
+    to {
+        border-right: none;
     }
 }
 
@@ -60,14 +79,12 @@
     font-size: x-large;
     font-weight: 900;
     padding-left: 0.5rem;
-    filter: drop-shadow(-2px 2px 1px rgba(0, 0, 0, 0.577));
 }
 
 .CU-subHeading p {
     font-size: 16.5px;
-    font-weight: 500;
+    font-weight: 600;
     padding-left: 2.8rem;
-    filter: drop-shadow(-1px 2px 1px rgba(51, 51, 51, 0.577));
 }
 
 .map {

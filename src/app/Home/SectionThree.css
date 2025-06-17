@@ -1,15 +1,16 @@
 #aboutUsSection {
-    height: calc(100vh - 9rem);
+    height: calc(100vh - 5rem);
     background-image: url('/PageThreeBackgroundLandscape.webp');
     background-size: 100% 100%;       /* make it fill the area */
     background-position: center;  /* center the image */
+    font-family: 'Chopin';
+    src: url('/fonts/chopin/Chopin-Regular.otf') format('opentype');
     background-repeat: no-repeat;
     text-align: center;
 }
 
 .aboutUsHeading {
     text-align: center;
-    font-family: 'Playfair Display', serif;
     font-size: 8vw;
     top: 1rem;
     position: relative;
@@ -38,16 +39,14 @@
     padding: 5px 10px 5px 10px;
     margin: 10px;
     width: 95%;
-    font-size: 14px;
+    font-size: 16.6px;
     font-weight: 500;
     text-align: justify;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(253, 247, 238);
 }
 
 .card h3 {
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 900;
     color: #3B82F6;
 }
@@ -64,7 +63,7 @@
 
 @media screen and (orientation: portrait) and (max-height: 1000px) {
     .mainWrapper { height: 120vh; }
-    #aboutUsSection { height: calc(120vh - 9rem); }
+    #aboutUsSection { height: calc(120vh - 5rem); }
     .aboutUsHeading { font-size: 35px; }
     .details {
         display: flex;
