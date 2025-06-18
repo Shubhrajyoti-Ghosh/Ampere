@@ -1,9 +1,17 @@
+@font-face {
+    font-family: 'Chopin';
+    src: url('/chopin-font-family/Chopin-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* improves loading performance */
+}
+
 footer {
     position: relative;
     background-color: #222;
     width: 100vw;
     font-family: 'Chopin';
-    src: url('/fonts/chopin/Chopin-Regular.otf') format('opentype');
+    font-family: 'Chopin', serif;
     padding-bottom: 0.5rem;
     top: 0;
 }
@@ -33,7 +41,7 @@ footer {
 }
 
 .societyInfo p {
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .socialMediaHandles {
@@ -42,7 +50,7 @@ footer {
 }
 
 .contacts {
-    font-size: 18px;
+    font-size: 17px;
     color: aliceblue;
     line-height: 1.1;
     text-align: left;
@@ -55,7 +63,7 @@ footer {
 }
 
 .subHeading {
-    font-size: 25px;
+    font-size: 20px;
     color: #3B82F6;
     text-align: center;
 }
@@ -84,7 +92,7 @@ footer {
     display: block;
     padding: 0.5rem;
     text-align: center;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .footerLink:hover, .footerLink:active, .footerLink:focus {
@@ -154,6 +162,7 @@ footer {
 }
 
 .copyright {
+    font-size: 13px;
     color: aliceblue;
     text-align: center;
 }

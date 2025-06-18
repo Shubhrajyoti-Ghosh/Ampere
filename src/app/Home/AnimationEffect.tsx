@@ -1,88 +1,132 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useRef, useCallback } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const AnimationEffect: React.FC = () => {
+    const wireAnimationsRef = useRef<(gsap.core.Tween | null)[]>([]);
+    const mousePositionRef = useRef({ x: 0, y: 0 });
+    const animationFrameRef = useRef<number | undefined>(undefined);
+    const isAnimatingRef = useRef<boolean[]>([]);
+    
     // SCROLL TRIGGER ANIMATIONS
     useGSAP(() => {
-        // Landing Text fade-in
+        // Batch DOM queries and set will-change for performance
+        const landingText1 = document.querySelector(".landingText1") as HTMLElement;
+        const landingText2 = document.querySelector(".landingText2") as HTMLElement;
+        
+        if (landingText1) {
+            landingText1.style.willChange = "transform, opacity";
+        }
+        if (landingText2) {
+            landingText2.style.willChange = "transform, opacity";
+        }
+
+        // Landing Text fade-in with staggered timing
         gsap.fromTo(".landingText1", {
             opacity: 0,
             y: "-40px",
         }, {
             opacity: 1,
             y: "0px",
-            duration: 2,
-            ease: "power2.out",
+            duration: 2.5,
+            ease: "power3.out",
             scrollTrigger: {
+                trigger: ".landingText1",
                 start: "top 45%",
                 end: "top 10%",
-                trigger: ".landingText1",
                 toggleActions: "play reverse play reverse",
+                scrub: 0.3,
+                invalidateOnRefresh: true,
             },
+            onComplete: () => {
+                if (landingText1) landingText1.style.willChange = "auto";
+            }
         });
+
         gsap.fromTo(".landingText2", {
             opacity: 0,
             y: "20px",
         }, {
             opacity: 1,
             y: "0px",
-            duration: 2,
-            ease: "power2.out",
+            duration: 2.5,
+            delay: 0.2,
+            ease: "power3.out",
             scrollTrigger: {
+                trigger: ".landingText2",
                 start: "top 80%",
                 end: "top 53%",
-                trigger: ".landingText2",
                 toggleActions: "play reverse play reverse",
+                scrub: 0.3,
+                invalidateOnRefresh: true,
             },
+            onComplete: () => {
+                if (landingText2) landingText2.style.willChange = "auto";
+            }
         });
 
-        // Wire stroke draw effect
+        // Wire stroke draw effect with optimized performance
         const wires = gsap.utils.toArray<SVGPathElement>(
             "#Front-yellow-wire, #Middle-yellow-wire, #Back-yellow-wire, #Front-blue-wire, #Middle-blue-wire, #Back-blue-wire"
         );
-        wires.forEach((wire) => {
+        
+        // Pre-set will-change for all wires
+        wires.forEach(wire => {
+            wire.style.willChange = "stroke-dashoffset";
+        });
+        
+        wires.forEach((wire, index) => {
             gsap.fromTo(wire, { 
-                strokeDashoffset: 1000, strokeDasharray: 1000
+                strokeDashoffset: 1000, 
+                strokeDasharray: 1000
             }, {
                 strokeDashoffset: 0,
-                duration: 2,
-                ease: "power2.out",
+                duration: 2.8,
+                delay: index * 0.12,
+                ease: "power2.inOut",
                 scrollTrigger: {
                     trigger: wire,
-                    start: "top 50%",
-                    end: "top top",
+                    start: "top 60%",
+                    end: "top 20%",
                     toggleActions: "play reverse play reverse",
+                    scrub: 0.8,
+                    invalidateOnRefresh: true,
                 },
+                onComplete: () => {
+                    wire.style.willChange = "auto";
+                }
             });
         });
 
-        // Transformer fade-in effect
+        // Transformer fade-in effect (optimized)
         const transformer = document.querySelector('#Transformer-in-Light') as SVGRectElement | null;
         if (transformer) {
+            transformer.style.willChange = "opacity";
+            
             gsap.fromTo(transformer, { 
-                opacity: 0 
+                opacity: 0
             }, {
                 opacity: 1,
-                duration: 2,
+                duration: 1.2,
                 ease: "power2.out",
                 scrollTrigger: {
                     trigger: transformer,
-                    start: "top 50%",
-                    end: "top top",
-                    toggleActions: "play reverse play reverse",
+                    start: "top 70%",
+                    toggleActions: "play none none reverse",
+                    invalidateOnRefresh: true,
                 },
+                onComplete: () => {
+                    transformer.style.willChange = "auto";
+                }
             });
         }
     }, []);
 
-
-    // Wire morphing interaction
+    // Wire morphing interaction (using original first code logic)
     const wireConfigs = [
         {
             id: "Front-yellow-wire",
@@ -169,6 +213,5 @@ const AnimationEffect: React.FC = () => {
 
     return null;
 };
-
 
 export default AnimationEffect;

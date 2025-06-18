@@ -1,10 +1,18 @@
+/* First, define the font face */
+@font-face {
+    font-family: 'Chopin';
+    src: url('/chopin-font-family/Chopin-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* improves loading performance */
+}
+
 #introductionSection {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-family: 'Chopin';
-    src: url('/fonts/chopin/Chopin-Regular.otf') format('opentype');
+    font-family: 'Chopin', serif; /* Add fallback font */
     background: 
         linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 80%, rgba(143, 141, 157, 0.8)),
         linear-gradient(to right, #00bfff 80%, #8f8d9d);
