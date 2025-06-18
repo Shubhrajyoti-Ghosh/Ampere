@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useCallback } from "react";
+import { useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -7,10 +7,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const AnimationEffect: React.FC = () => {
-    const wireAnimationsRef = useRef<(gsap.core.Tween | null)[]>([]);
-    const mousePositionRef = useRef({ x: 0, y: 0 });
-    const animationFrameRef = useRef<number | undefined>(undefined);
-    const isAnimatingRef = useRef<boolean[]>([]);
     
     // SCROLL TRIGGER ANIMATIONS
     useGSAP(() => {
