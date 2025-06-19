@@ -22,15 +22,19 @@
     position: relative;
     font-size: 8vh;
     font-weight: 900;
-    color: #f05f26;
+    color: #000000;
     overflow: hidden;
     white-space: nowrap;
     border-right: 1px solid black;
-    animation: typing 3s steps(13) forwards, blink 0.5s step-end 9, removeCursor 0s forwards;
+    animation: typing 3s steps(13) forwards, blink 0.5s step-end 9, removeCursor 0s forwards; /* steps = no. of characters + 1 */
     animation-delay: 
         0s,                /* typing starts immediately */
         0s,                /* blink also starts immediately */
         4.5s;              /* run removeCursor after blink ends */
+}
+
+.heading span {
+    color: #3B82F6;
 }
 
 /* Typing effect */

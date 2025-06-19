@@ -7,7 +7,7 @@ export default function ContactUs() {
     return (
         <section className="contactUsWrapper">
 
-            <div id="CU-heading"><h1 className="heading">Get in Touch</h1></div>
+            <div id="CU-heading"><h1 className="heading">Get in <span>Touch</span></h1></div>
 
             <div className="CU-information">
                 <div className="CU-details">

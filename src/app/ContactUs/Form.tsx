@@ -83,7 +83,7 @@ export default function MsgBox() {
 
     return (
         <div className="contactForm">
-            <h3><i className="fa-solid fa-comment" style={{color: "#5c4033"}}/><span>We’d Love to Hear From You</span></h3>
+            <h3><i className="fa-solid fa-comment" style={{color: "#5c5d5e"}}/><span>We’d Love to Hear From You</span></h3>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="fullName">Name:</label>
                 <input
@@ -131,24 +131,24 @@ export default function MsgBox() {
                 <br/>
                 <label htmlFor="remarks">Message:</label>
                 <textarea
-                    className={getInputClass("remarks")}
-                    placeholder="Send us your thoughts, suggestions, queries or grievances..."
-                    value={formData.remarks}
-                    onChange={handleInputChange}
-                    onFocus={() => handleFocus("remarks")}
-                    onBlur={() => handleBlur("remarks")}
-                    id="remarks"
-                    name="remarks"
-                    rows={5}
-                    maxLength={500}
-                    required
+                  className={getInputClass("remarks")}
+                  placeholder="Send us your thoughts, suggestions, queries or grievances..."
+                  value={formData.remarks}
+                  onChange={handleInputChange}
+                  onFocus={() => handleFocus("remarks")}
+                  onBlur={() => handleBlur("remarks")}
+                  id="remarks"
+                  name="remarks"
+                  rows={5}
+                  maxLength={500}
+                  required
                 />
                 <p style={{
-                        color: formData.remarks.length >= 500 ? "red" : formData.remarks.length >= 450 ? "orange" : "gray",
-                        fontSize: "0.85rem",
-                        textAlign: "right",
-                        marginTop: "-20px"
-                    }}>
+                  color: formData.remarks.length >= 500 ? "red" : formData.remarks.length >= 450 ? "orange" : "gray",
+                  fontSize: "0.85rem",
+                  textAlign: "right",
+                  marginTop: "-20px"
+                }}>
                     {formData.remarks.length}/500 characters
                 </p>
                 <button type="submit"><i className="fa-solid fa-paper-plane" style={{color: "#3B82F6", fontSize: "2rem"}}/></button>
